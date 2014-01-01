@@ -1,0 +1,31 @@
+
+== is an operator. equals is a method defined in the Object class
+
+== checks if two objects have the same address(refernce) in the memory for non-primitive datatypes
+and for primitive it checks if they have the same value.
+
+
+== compares the references while .equals() compares the attributes(i.e. the actual value)
+
+equals method on the other hand checks if the two objects which are being compared have an actual
+equal value(depending on how ofcourse the equals method has been implemented for the objects. 
+equals method cannot be applied on primitives(which means that if a is a primitive a.equals(someobject) 
+is not allowed, however someobject.equals(a) is allowed)
+
+
+
+Example:
+
+class Mycar
+{
+  string color;
+  Mycar(string str)
+ {
+   color = str;
+ }
+}   
+
+Mycar a = new Mycar("blue");
+Mycar b = new Mycar("blue");
+a==b // Returns false
+a.Equals(b) // Returns true
